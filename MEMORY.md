@@ -235,3 +235,47 @@ File: `/home/forrest/.agentmemory/system_profile.txt`
 - Auto-regenerated on each run
 - Contains: system info, CPU details, memory, storage, network, processes, temps, GPU, power
 - Readable by next LLM instance to understand host constraints
+
+---
+
+## System Profiler Script - system_profiler.sh
+
+### Location
+`/home/forrest/.agentmemory/system_profiler.sh`
+
+### Purpose
+Provides comprehensive system information for LLMs to understand the system configuration quickly. Designed to work on Linux, macOS, and other Unix-like systems with special handling for Raspberry Pi hardware.
+
+### Features
+- System information (hostname, kernel, architecture, distribution)
+- CPU details (model, cores, architecture, frequency) with ARM hex-to-name translation
+- Memory information (total, available, used)
+- Storage information (disk usage, mount points)
+- Network information (interfaces and IP addresses)
+- Process and load information
+- Uptime and boot information
+- Temperature information (where available)
+- GPU information (detects NVIDIA, AMD, Intel, and Raspberry Pi VideoCore)
+- Power information (battery level where available)
+
+### Key Optimizations
+- Caching strategy: Reads /proc/cpuinfo once and caches the result
+- ARM hex-to-name lookup tables for human-readable CPU information
+- Guarded temperature comparisons to prevent crashes on non-numeric values
+- Intel GPU detection verifies vendor ID rather than just counting DRM devices
+- Uses awk instead of bc for math operations (no external dependency)
+- Eliminated useless use of cat commands
+- Robust network interface parsing
+- Output to both stdout and persistent file (system_profile.txt)
+
+### Usage
+```bash
+./system_profiler.sh
+```
+Outputs to terminal and creates system_profile.txt in the same directory.
+
+### Persistent Output
+- File: `/home/forrest/.agentmemory/system_profile.txt`
+- Auto-generated on each script run
+- Provides system context for subsequent LLM instances
+- Enables "Context is Consciousness" (Tenet 5) by making system info readily available
