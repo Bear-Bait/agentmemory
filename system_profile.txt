@@ -1,0 +1,62 @@
+===========================================
+System Profiler
+Generated: Sun Feb  8 10:26:38 AM EST 2026
+===========================================
+
+=== System Information ===
+Hostname: emacsOS
+System: Linux
+Kernel: 6.12.62+rpt-rpi-2712
+Architecture: aarch64
+Distribution: Debian GNU/Linux 12 (bookworm)
+
+=== CPU Information ===
+CPU Model: Raspberry Pi 5 Model B Rev 1.0 (Cortex-A76, ARM, ARMv8)
+CPU Cores: 4
+CPU Architecture: aarch64
+CPU Current Frequency: 2.40 GHz
+
+=== Memory Information ===
+Total Memory: 7.9Gi
+Available Memory: 4.0Gi
+Used Memory: 3.9Gi
+
+=== Storage Information ===
+Disk Usage:
+  /dev/nvme0n1p2         910G  487G  377G  57% /
+  /dev/nvme0n1p1         510M   84M  427M  17% /boot/firmware
+  /dev/sda2              112G   56G   50G  53% /mnt/sdcard
+Mount Points:
+  /dev/nvme0n1p2 on / type ext4 (rw,noatime)
+  /dev/nvme0n1p1 on /boot/firmware type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro)
+  /dev/sda2 on /mnt/sdcard type ext4 (rw,relatime)
+
+=== Network Information ===
+Network Interfaces:
+  lo: 127.0.0.1
+  wlan0: 192.168.1.41
+  zt7nnbr52n: 10.147.17.15
+  tailscale0: 100.69.148.4
+
+=== Process and Load Information ===
+Load Average:  2.86, 2.70, 2.68
+Running Processes: 4
+Total Processes: 385
+
+=== Uptime Information ===
+Uptime: up 5 days, 23 hours, 29 minutes
+Boot Time: 2026-02-02 10:56
+
+=== Temperature Information ===
+  cpu-thermal: 64.5C
+  SoC Temperature: 64.8'C
+
+=== GPU Information ===
+VideoCore GPU: Memory=8M
+
+=== Power Information ===
+Power: No battery detected
+
+===========================================
+System profiling complete.
+===========================================
